@@ -1,0 +1,14 @@
+{% extends 'places.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if place.visit_date %}
+            <div class="date">
+                {{ place.visit_date }}
+            </div>
+        {% endif %}
+        <h1>{{ place.name }}</h1>
+        <p>{{ place.text|linebreaksbr }}</p>
+        <p>{{ place.coordinates }}</p>
+    </div>
+{% endblock %}
